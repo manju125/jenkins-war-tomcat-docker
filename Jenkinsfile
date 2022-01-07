@@ -20,7 +20,7 @@ stage('Docker Build and Tag') {
            steps {
               
                 sh 'sudo docker build -t moni275/dockerintegration .' 
-                //sh 'sudo docker tag samplewebapp moni275/dockerintegration:latest'
+                sh 'sudo docker tag samplewebapp moni275/dockerintegration:latest'
                 //sh 'docker tag samplewebapp moni275/dockerintegration:$BUILD_NUMBER'
                
           }
