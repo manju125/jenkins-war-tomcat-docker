@@ -43,7 +43,7 @@ stage('Docker Build and Tag') {
              
             steps 
    {
-                sh "sudo docker run -d -p 8003:8080 moni275/dockerintegration"
+                sh "sudo docker run -d -p 80:80 moni275/dockerintegration"
  
             }
         }
