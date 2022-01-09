@@ -29,10 +29,11 @@ stage('Docker Build and Tag') {
   stage('Publish image to Docker Hub') {
           
             steps {
-        withDockerRegistry([ credentialsId: "Dockerhub", url: "https://hub.docker.com/repository/docker/moni275/dockerintegration" ]) {
-          sh  'sudo docker push moni275/dockerintegration:latest'
+                sh "docker login -u moni275 -p Manju@275"
+        //withDockerRegistry([ credentialsId: "Dockerhub", url: "https://hub.docker.com/repository/docker/moni275/dockerintegration" ]) {
+        //  sh  'sudo docker push moni275/dockerintegration:latest'
         //  sh  'docker push moni275/dockerintegration:$BUILD_NUMBER' 
-        }
+      //  }
                   
           }
         }
