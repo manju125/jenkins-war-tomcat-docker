@@ -50,7 +50,7 @@ stage('Docker Build and Tag') {
  stage('Run Docker container on remote hosts') {
              
             steps {
-                sh "sudo docker -H ssh://ec2-3-110-128-0.ap-south-1.compute.amazonaws.com run -d -p 8003:8080 moni275/dockerintegration"
+                sh "sudo docker -H ssh://ec2-3-110-128-0.ap-south-1.compute.amazonaws.com run -d -p 80:80 moni275/dockerintegration"
  
             }
         }
