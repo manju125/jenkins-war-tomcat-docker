@@ -29,7 +29,7 @@ stage('Docker Build and Tag') {
   stage('Publish image to Docker Hub') {
           
             steps {
-                sh "docker login -u moni275 -p Manju@275"
+                sh "docker login -u <dockerhub username> -p <dockerhub password>"
                 sh 'docker push moni275/dockerintegration:$BUILD_NUMBER'
         //withDockerRegistry([ credentialsId: "Dockerhub", url: "https://hub.docker.com/repository/docker/moni275/dockerintegration" ]) {
         //  sh  'sudo docker push moni275/dockerintegration:latest'
